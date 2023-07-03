@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"pool-1-thread-2","id":1},{"content":"pool-1-thread-4","id":2},{"content":"pool-1-thread-1","id":3},{"content":"pool-1-thread-3","id":4}];
+var items = [{"id":1,"group":1,"content":"pets\/put\/pet[1:3]","start":1688374851986,"end":1688374853462,"title":"pets\/put\/pet[1:3] 04:00:51.986-04:00:53.462 Put status of a pet"},{"id":2,"group":2,"content":"pets\/post\/pet-post[1:9]","start":1688374848550,"end":1688374850476,"title":"pets\/post\/pet-post[1:9] 04:00:48.550-04:00:50.476 Post a pet"},{"id":3,"group":2,"content":"pets\/post\/pet-post[2.1:21]","start":1688374850488,"end":1688374851256,"title":"pets\/post\/pet-post[2.1:21] 04:00:50.488-04:00:51.256 Post pets with the same ID"},{"id":4,"group":1,"content":"pets\/post\/pet-post[2.2:22]","start":1688374850489,"end":1688374851220,"title":"pets\/post\/pet-post[2.2:22] 04:00:50.489-04:00:51.220 Post pets with the same ID"},{"id":5,"group":1,"content":"pets\/post\/pet-post[2.3:23]","start":1688374851235,"end":1688374851981,"title":"pets\/post\/pet-post[2.3:23] 04:00:51.235-04:00:51.981 Post pets with the same ID"},{"id":6,"group":3,"content":"pets\/post\/pet-post[3:25]","start":1688374851235,"end":1688374852002,"title":"pets\/post\/pet-post[3:25] 04:00:51.235-04:00:52.002 Post a pet without name"},{"id":7,"group":4,"content":"pets\/post\/pet-post[4:30]","start":1688374851238,"end":1688374851977,"title":"pets\/post\/pet-post[4:30] 04:00:51.238-04:00:51.977 Post a pet without nothing"},{"id":8,"group":2,"content":"pets\/post\/pet-post[5:35]","start":1688374851262,"end":1688374852010,"title":"pets\/post\/pet-post[5:35] 04:00:51.262-04:00:52.010 Post a pet without status"},{"id":9,"group":4,"content":"pets\/post\/pet-post[6:40]","start":1688374851981,"end":1688374852710,"title":"pets\/post\/pet-post[6:40] 04:00:51.981-04:00:52.710 Post a pet with status invalid"},{"id":10,"group":3,"content":"pets\/get\/pet-get[1:6]","start":1688374848550,"end":1688374851221,"title":"pets\/get\/pet-get[1:6] 04:00:48.550-04:00:51.221 Get a pet created"},{"id":11,"group":1,"content":"pets\/get\/pet-get[2:12]","start":1688374848550,"end":1688374850476,"title":"pets\/get\/pet-get[2:12] 04:00:48.550-04:00:50.476 Get a pet that wasn't created"},{"id":12,"group":4,"content":"pets\/get\/pet-get[3:21]","start":1688374848550,"end":1688374851224,"title":"pets\/get\/pet-get[3:21] 04:00:48.550-04:00:51.224 Get a pet created by status","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Karate Timeline</title>
+    <style>
+      body, html { font-family: arial, sans-serif; font-size: 11pt; }
+      #visualization { box-sizing: border-box; width: 100%; height: 300px; }
+      .vis-item.failed { background-color: #F2928C; }
+      .page-heading { padding: 0.5em; margin-bottom: 0.5em; background-color: lightcyan; border: 1px solid gray; }
+    </style>
+    <script src="res/vis.min.js"></script>
+    <link href="res/vis.min.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <div class="page-heading">
+      <a href="karate-summary.html">Summary</a>
+    </div>     
+    <div id="visualization"></div>
+    <script>
+var groups = [{"content":"main","id":1}];
+var items = [{"id":1,"group":1,"content":"src\/test\/java\/pets\/post\/pet-post[2.1:25]","start":1688358781890,"end":1688358784094,"title":"src\/test\/java\/pets\/post\/pet-post[2.1:25] 23:33:01.890-23:33:04.094 Post a pet with the same ID","className":"failed"},{"id":2,"group":1,"content":"src\/test\/java\/pets\/post\/pet-post[2.2:26]","start":1688358784108,"end":1688358784848,"title":"src\/test\/java\/pets\/post\/pet-post[2.2:26] 23:33:04.108-23:33:04.848 Post a pet with the same ID","className":"failed"},{"id":3,"group":1,"content":"src\/test\/java\/pets\/post\/pet-post[2.3:27]","start":1688358784857,"end":1688358785592,"title":"src\/test\/java\/pets\/post\/pet-post[2.3:27] 23:33:04.857-23:33:05.592 Post a pet with the same ID","className":"failed"}];
+</script>
+    <script>
+      var container = document.getElementById('visualization');
+      var timeline = new vis.Timeline(container);
+      timeline.setOptions({groupOrder: 'content'});
+      timeline.setGroups(new vis.DataSet(groups));
+      timeline.setItems(new vis.DataSet(items));
+    </script>
+  </body>
+</html>

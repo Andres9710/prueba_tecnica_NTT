@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <link rel="stylesheet" href="res/bootstrap.min.css" type="text/css"/>
+    <link rel="stylesheet" href="res/karate-report.css" type="text/css"/>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <script type="text/javascript" src="res/jquery.min.js"></script>
+    <script type="text/javascript" src="res/jquery.tablesorter.min.js"></script>
+    <script type="text/javascript" src="res/bootstrap.min.js"></script>
+    <script type="text/javascript" src="res/karate-report.js"></script>
+    <script>
+      posthog.register_once({
+        karate_version:"1.2.0.RC5"
+      });
+      posthog.capture('report_feature');
+    </script>    
+    <title>src.test.java.pets.get.pet-get</title>  
+  </head>
+  <body>   
+    <div id="root-container">
+      <div id="leftnav">
+                
+        <div>
+  <div class="nav-logo">
+    <a href="karate-summary.html">
+      <img src="karate-logo.svg" alt="Karate"/>
+    </a>
+    <div class="nav-count">
+      <div id="nav-pass" class="bg-success">0</div>
+      <div id="nav-fail" class="bg-danger">1</div>
+    </div>
+  </div>
+  <div id="nav-type">
+    <div>Scenarios</div>
+  </div>         
+  <div id="nav-date">
+    <div>2023-07-03 03:32:30 AM</div>
+  </div>        
+</div>
+
+        <div class="nav-container">
+          <div class="nav-item failed">
+            <a href="#[3:22]"><span>[3:22]</span> <span>Get a pet created by status</span></a>
+          </div>
+        </div>
+      </div>
+      <div id="content">
+        <div class="page-heading alert alert-primary">
+          <a href="karate-summary.html">Summary</a><span class="feature-label">|</span>
+          <a href="karate-tags.html">Tags</a><span class="feature-label">|</span>
+          <span class="feature-label">Feature:</span>
+          <span class="feature-path">src/test/java/pets/get/pet-get.feature</span><span class="feature-label">|</span>
+          <span class="feature-name">Get pet created on store</span>
+          <span class="feature-description"></span>
+        </div>
+        <div class="scenario">
+          <div class="scenario-heading" id="[3:22]">
+            <div class="heading-container">
+              <div class="scenario-tags">
+                
+              </div>
+              <div class="scenario-keyword">
+                Scenario: <span>[3:22]</span>
+                <span class="scenario-name">Get a pet created by status</span>
+                <span></span>
+              </div>
+            </div>
+            <div class="scenario-time failed">
+              <span>ms:</span>&nbsp;<span>2236</span>
+            </div>
+          </div>
+          <div class="step-row">
+            <div class="step-container" id="[3:22]bg">
+              <div class="step-ref bg-step">&gt;&gt;</div>
+              <div class="step-cell passed">Background:</div>
+            </div>
+            <div class="time-cell passed"></div>
+          </div>
+          <div data-parent="[3:22]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.4">
+      <div class="step-ref bg-step">4</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def responseFailedParameter = read(&quot;fail-parsing-parameter-get.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">249</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div data-parent="[3:22]bg"><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.5">
+      <div class="step-ref bg-step">5</div>
+      
+      <div class="step-cell passed">
+        <span>*</span>&nbsp;<span>def responseSuccesStatusParameter = read(&quot;successful-response-get-status.json&quot;)</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.23">
+      <div class="step-ref passed">23</div>
+      
+      <div class="step-cell passed">
+        <span>Given</span>&nbsp;<span>url &quot;https://petstore.swagger.io/v2/pet/findByStatus?status=sold&quot;</span>
+      </div>
+    </div>
+    <div class="time-cell passed">2</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.24">
+      <div class="step-ref passed">24</div>
+      
+      <div class="step-cell passed">
+        <span>When</span>&nbsp;<span>method get</span>
+      </div>
+    </div>
+    <div class="time-cell passed">1960</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.24">03:32:29.442 request:
+1 &gt; GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+03:32:30.808 response time in milliseconds: 1363
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 08:32:27 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+[{&quot;id&quot;:9223372036854246271,&quot;category&quot;:{&quot;id&quot;:440,&quot;name&quot;:&quot;Cooper&quot;},&quot;name&quot;:&quot;Della&quot;,&quot;photoUrls&quot;:[&quot;http://placeimg.com/640/480&quot;],&quot;tags&quot;:[{&quot;id&quot;:633,&quot;name&quot;:&quot;Gordon&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854246570,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854246662,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:333,&quot;category&quot;:{&quot;id&quot;:2,&quot;name&quot;:&quot;dog&quot;},&quot;name&quot;:&quot;Lord&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854246701,&quot;category&quot;:{&quot;id&quot;:-4630181,&quot;name&quot;:&quot;nulla quis pariatur&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;in deserunt esse&quot;,&quot;ut do occaecat non&quot;],&quot;tags&quot;:[{&quot;id&quot;:32974752,&quot;name&quot;:&quot;eiusmod in exercitation mollit ullamco&quot;},{&quot;id&quot;:-97929987,&quot;name&quot;:&quot;labore do dolor&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:822922,&quot;category&quot;:{&quot;id&quot;:-69794609,&quot;name&quot;:&quot;irure laborum id proident incididunt&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;dolore ipsum qui&quot;,&quot;fugiat non eiusmod Duis nisi&quot;],&quot;tags&quot;:[{&quot;id&quot;:-24720491,&quot;name&quot;:&quot;nisi&quot;},{&quot;id&quot;:87603503,&quot;name&quot;:&quot;ut sint enim cillum nisi&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9029,&quot;category&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Dogs&quot;},&quot;name&quot;:&quot;Ice&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;woof&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:4890,&quot;category&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Dogs&quot;},&quot;name&quot;:&quot;Ice&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;woof&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:68,&quot;category&quot;:{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;},&quot;name&quot;:&quot;bagworm&quot;,&quot;photoUrls&quot;:[&quot;6NV0&quot;],&quot;tags&quot;:[{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;}],&quot;status&quot;:&quot;sold&quot;}]
+
+</div>   
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.25">
+      <div class="step-ref passed">25</div>
+      
+      <div class="step-cell passed">
+        <span>Then</span>&nbsp;<span>status 200</span>
+      </div>
+    </div>
+    <div class="time-cell passed">0</div>
+  </div>
+
+   
+  
+  
+
+  
+
+     
+
+  
+
+</div>
+</div>
+          <div><div>
+  
+
+  
+
+  <div class="step-row">
+    <div class="step-container" id="0.26">
+      <div class="step-ref failed">26</div>
+      
+      <div class="step-cell failed">
+        <span>And</span>&nbsp;<span>match $ == responseSuccesStatusParameter</span>
+      </div>
+    </div>
+    <div class="time-cell failed">23</div>
+  </div>
+
+   
+  
+  
+
+  
+
+  <div class="preformatted" data-parent="0.26">03:32:30.837 src/test/java/pets/get/pet-get.feature:26
+And match $ == responseSuccesStatusParameter
+match failed: EQUALS
+  $ | data types don&#39;t match (LIST:MAP)
+  [{&quot;id&quot;:9223372036854246271,&quot;category&quot;:{&quot;id&quot;:440,&quot;name&quot;:&quot;Cooper&quot;},&quot;name&quot;:&quot;Della&quot;,&quot;photoUrls&quot;:[&quot;http://placeimg.com/640/480&quot;],&quot;tags&quot;:[{&quot;id&quot;:633,&quot;name&quot;:&quot;Gordon&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854246570,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854246662,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:333,&quot;category&quot;:{&quot;id&quot;:2,&quot;name&quot;:&quot;dog&quot;},&quot;name&quot;:&quot;Lord&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854246701,&quot;category&quot;:{&quot;id&quot;:-4630181,&quot;name&quot;:&quot;nulla quis pariatur&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;in deserunt esse&quot;,&quot;ut do occaecat non&quot;],&quot;tags&quot;:[{&quot;id&quot;:32974752,&quot;name&quot;:&quot;eiusmod in exercitation mollit ullamco&quot;},{&quot;id&quot;:-97929987,&quot;name&quot;:&quot;labore do dolor&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:822922,&quot;category&quot;:{&quot;id&quot;:-69794609,&quot;name&quot;:&quot;irure laborum id proident incididunt&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;dolore ipsum qui&quot;,&quot;fugiat non eiusmod Duis nisi&quot;],&quot;tags&quot;:[{&quot;id&quot;:-24720491,&quot;name&quot;:&quot;nisi&quot;},{&quot;id&quot;:87603503,&quot;name&quot;:&quot;ut sint enim cillum nisi&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9029,&quot;category&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Dogs&quot;},&quot;name&quot;:&quot;Ice&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;woof&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:4890,&quot;category&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Dogs&quot;},&quot;name&quot;:&quot;Ice&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;woof&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:68,&quot;category&quot;:{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;},&quot;name&quot;:&quot;bagworm&quot;,&quot;photoUrls&quot;:[&quot;6NV0&quot;],&quot;tags&quot;:[{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;}],&quot;status&quot;:&quot;sold&quot;}]
+  {&quot;pets&quot;:{&quot;Pet&quot;:[{&quot;id&quot;:&quot;#number&quot;,&quot;name&quot;:&quot;#string&quot;,&quot;photoUrls&quot;:&quot;##string&quot;,&quot;status&quot;:&quot;sold&quot;,&quot;tags&quot;:&quot;##string&quot;}]}}
+
+src/test/java/pets/get/pet-get.feature:26
+</div>   
+
+  
+
+</div>
+</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

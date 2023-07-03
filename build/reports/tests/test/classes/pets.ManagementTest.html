@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv="x-ua-compatible" content="IE=edge"/>
+<title>Test results - ManagementTest</title>
+<link href="../css/base-style.css" rel="stylesheet" type="text/css"/>
+<link href="../css/style.css" rel="stylesheet" type="text/css"/>
+<script src="../js/report.js" type="text/javascript"></script>
+</head>
+<body>
+<div id="content">
+<h1>ManagementTest</h1>
+<div class="breadcrumbs">
+<a href="../index.html">all</a> &gt; 
+<a href="../packages/pets.html">pets</a> &gt; ManagementTest</div>
+<div id="summary">
+<table>
+<tr>
+<td>
+<div class="summaryGroup">
+<table>
+<tr>
+<td>
+<div class="infoBox" id="tests">
+<div class="counter">1</div>
+<p>tests</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="failures">
+<div class="counter">0</div>
+<p>failures</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="ignored">
+<div class="counter">0</div>
+<p>ignored</p>
+</div>
+</td>
+<td>
+<div class="infoBox" id="duration">
+<div class="counter">8.197s</div>
+<p>duration</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</td>
+<td>
+<div class="infoBox success" id="successRate">
+<div class="percent">100%</div>
+<p>successful</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div id="tabs">
+<ul class="tabLinks">
+<li>
+<a href="#tab0">Tests</a>
+</li>
+<li>
+<a href="#tab1">Standard output</a>
+</li>
+<li>
+<a href="#tab2">Standard error</a>
+</li>
+</ul>
+<div id="tab0" class="tab">
+<h2>Tests</h2>
+<table>
+<thead>
+<tr>
+<th>Test</th>
+<th>Duration</th>
+<th>Result</th>
+</tr>
+</thead>
+<tr>
+<td class="success">testParallel()</td>
+<td class="success">8.197s</td>
+<td class="success">passed</td>
+</tr>
+</table>
+</div>
+<div id="tab1" class="tab">
+<h2>Standard output</h2>
+<span class="code">
+<pre>04:00:47.341 [Test worker] DEBUG com.intuit.karate.Suite - [config] classpath:karate-config.js
+04:00:47.348 [Test worker] INFO  com.intuit.karate.Suite - backed up existing 'build\karate-reports' dir to: build\karate-reports_1688374847347
+04:00:47.356 [Test worker] DEBUG com.intuit.karate.Suite - waiting for 4 features to complete
+04:00:48.688 [pool-1-thread-1] INFO  c.intuit.karate.core.FeatureRuntime - classpath:pets/get/../post/pet_post_snippets.feature - call by tag at line 5: Create
+04:00:48.688 [pool-1-thread-3] INFO  c.intuit.karate.core.FeatureRuntime - classpath:pets/get/../post/pet_post_snippets.feature - call by tag at line 5: Create
+04:00:49.223 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 &gt; GET https://petstore.swagger.io/v2/pet/0
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+
+
+04:00:49.224 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 38
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Scooby&quot;,&quot;status&quot;:&quot;available&quot;}
+
+04:00:49.224 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 38
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Scooby&quot;,&quot;status&quot;:&quot;available&quot;}
+
+04:00:49.224 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 35
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Max&quot;,&quot;status&quot;:&quot;available&quot;}
+
+04:00:50.455 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 1227
+1 &lt; 404
+1 &lt; Date: Mon, 03 Jul 2023 09:00:47 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;code&quot;:1,&quot;type&quot;:&quot;error&quot;,&quot;message&quot;:&quot;Pet not found&quot;}
+
+04:00:50.455 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 1227
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:47 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:9223372036854247587,&quot;name&quot;:&quot;Scooby&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;available&quot;}
+
+04:00:50.455 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 1226
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:47 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:9223372036854247586,&quot;name&quot;:&quot;Max&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;available&quot;}
+
+04:00:50.455 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 1226
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:47 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:9223372036854247588,&quot;name&quot;:&quot;Scooby&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;available&quot;}
+
+04:00:50.474 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+2 &gt; GET https://petstore.swagger.io/v2/pet/findByStatus?status=sold
+2 &gt; Host: petstore.swagger.io
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+04:00:50.481 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+2 &gt; GET https://petstore.swagger.io/v2/pet/9223372036854247587
+2 &gt; Host: petstore.swagger.io
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+2 &gt; Accept-Encoding: gzip,deflate
+
+
+04:00:50.496 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 41
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;id&quot;:1,&quot;name&quot;:&quot;Nala&quot;,&quot;status&quot;:&quot;pending&quot;}
+
+04:00:50.496 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 42
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;id&quot;:1,&quot;name&quot;:&quot;Max&quot;,&quot;status&quot;:&quot;available&quot;}
+
+04:00:51.209 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 735
+2 &lt; 200
+2 &lt; Date: Mon, 03 Jul 2023 09:00:48 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 &lt; Server: Jetty(9.2.9.v20150224)
+[{&quot;id&quot;:9223372036854246701,&quot;category&quot;:{&quot;id&quot;:-4630181,&quot;name&quot;:&quot;nulla quis pariatur&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;in deserunt esse&quot;,&quot;ut do occaecat non&quot;],&quot;tags&quot;:[{&quot;id&quot;:32974752,&quot;name&quot;:&quot;eiusmod in exercitation mollit ullamco&quot;},{&quot;id&quot;:-97929987,&quot;name&quot;:&quot;labore do dolor&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:822922,&quot;category&quot;:{&quot;id&quot;:-69794609,&quot;name&quot;:&quot;irure laborum id proident incididunt&quot;},&quot;name&quot;:&quot;doggie&quot;,&quot;photoUrls&quot;:[&quot;dolore ipsum qui&quot;,&quot;fugiat non eiusmod Duis nisi&quot;],&quot;tags&quot;:[{&quot;id&quot;:-24720491,&quot;name&quot;:&quot;nisi&quot;},{&quot;id&quot;:87603503,&quot;name&quot;:&quot;ut sint enim cillum nisi&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9029,&quot;category&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Dogs&quot;},&quot;name&quot;:&quot;Ice&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;woof&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:4890,&quot;category&quot;:{&quot;id&quot;:1,&quot;name&quot;:&quot;Dogs&quot;},&quot;name&quot;:&quot;Ice&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:1,&quot;name&quot;:&quot;woof&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:9223372036854246860,&quot;category&quot;:{&quot;id&quot;:0,&quot;name&quot;:&quot;monkey&quot;},&quot;name&quot;:&quot;Nuts&quot;,&quot;photoUrls&quot;:[&quot;string&quot;],&quot;tags&quot;:[{&quot;id&quot;:0,&quot;name&quot;:&quot;string&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:68,&quot;category&quot;:{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;},&quot;name&quot;:&quot;bagworm&quot;,&quot;photoUrls&quot;:[&quot;6NV0&quot;],&quot;tags&quot;:[{&quot;id&quot;:68,&quot;name&quot;:&quot;bagworm&quot;}],&quot;status&quot;:&quot;sold&quot;},{&quot;id&quot;:15,&quot;name&quot;:&quot;test dog&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;}]
+
+04:00:51.217 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 720
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:48 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:1,&quot;name&quot;:&quot;Nala&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;pending&quot;}
+
+04:00:51.219 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 737
+2 &lt; 200
+2 &lt; Date: Mon, 03 Jul 2023 09:00:48 GMT
+2 &lt; Content-Type: application/json
+2 &lt; Transfer-Encoding: chunked
+2 &lt; Connection: keep-alive
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:9223372036854247587,&quot;name&quot;:&quot;Scooby&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;available&quot;}
+
+04:00:51.222 [pool-1-thread-3] ERROR com.intuit.karate - classpath:pets/get/pet-get.feature:27
+And match petIds contains any petId
+match failed: CONTAINS_ANY
+  $ | actual does not contain expected | actual array does not contain any of the expected items (LIST:NUMBER)
+  [9223372036854246701,822922,9029,4890,9223372036854246860,68,15]
+  9223372036854247588
+
+    $[6] | not equal (NUMBER:NUMBER)
+    15
+    9223372036854247588
+
+    $[5] | not equal (NUMBER:NUMBER)
+    68
+    9223372036854247588
+
+    $[4] | not equal (NUMBER:NUMBER)
+    9223372036854246860
+    9223372036854247588
+
+    $[3] | not equal (NUMBER:NUMBER)
+    4890
+    9223372036854247588
+
+    $[2] | not equal (NUMBER:NUMBER)
+    9029
+    9223372036854247588
+
+    $[1] | not equal (NUMBER:NUMBER)
+    822922
+    9223372036854247588
+
+    $[0] | not equal (NUMBER:NUMBER)
+    9223372036854246701
+    9223372036854247588
+
+classpath:pets/get/pet-get.feature:27
+04:00:51.246 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 37
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;id&quot;:1,&quot;name&quot;:&quot;Rex&quot;,&quot;status&quot;:&quot;sold&quot;}
+
+04:00:51.253 [pool-1-thread-1] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 17
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;status&quot;:&quot;sold&quot;}
+
+04:00:51.255 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 2
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{}
+
+04:00:51.255 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 758
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:48 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:1,&quot;name&quot;:&quot;Max&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;available&quot;}
+
+04:00:51.269 [pool-1-thread-4] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 16
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Simba&quot;}
+
+04:00:51.975 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 720
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:49 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:9223372036854247591,&quot;photoUrls&quot;:[],&quot;tags&quot;:[]}
+
+04:00:51.980 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 733
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:49 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:1,&quot;name&quot;:&quot;Rex&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;}
+
+04:00:51.988 [pool-1-thread-3] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 30
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;$%&amp;%&quot;,&quot;status&quot;:&quot;%&amp;%&quot;}
+
+04:00:51.990 [pool-1-thread-2] INFO  c.intuit.karate.core.FeatureRuntime - classpath:pets/put/../post/pet_post_snippets.feature - call by tag at line 5: Create
+04:00:51.998 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+1 &gt; POST https://petstore.swagger.io/v2/pet
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Content-Length: 38
+1 &gt; Host: petstore.swagger.io
+1 &gt; Connection: Keep-Alive
+1 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+1 &gt; Accept-Encoding: gzip,deflate
+{&quot;name&quot;:&quot;Scooby&quot;,&quot;status&quot;:&quot;available&quot;}
+
+04:00:52.001 [pool-1-thread-1] DEBUG com.intuit.karate - response time in milliseconds: 748
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:49 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:9223372036854247592,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;sold&quot;}
+
+04:00:52.010 [pool-1-thread-4] DEBUG com.intuit.karate - response time in milliseconds: 741
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:49 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:9223372036854247593,&quot;name&quot;:&quot;Simba&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[]}
+
+---------------------------------------------------------
+feature: classpath:pets/get/pet-get.feature
+scenarios:  3 | passed:  2 | failed:  1 | time: 7,0578
+---------------------------------------------------------
+
+04:00:52.325 [pool-2-thread-1] INFO  com.intuit.karate.Suite - &lt;&lt;fail&gt;&gt; feature 1 of 4 (3 remaining) classpath:pets/get/pet-get.feature
+04:00:52.710 [pool-1-thread-3] DEBUG com.intuit.karate - response time in milliseconds: 722
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:49 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:9223372036854247594,&quot;name&quot;:&quot;$%&amp;%&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;%&amp;%&quot;}
+
+04:00:52.714 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 716
+1 &lt; 200
+1 &lt; Date: Mon, 03 Jul 2023 09:00:49 GMT
+1 &lt; Content-Type: application/json
+1 &lt; Transfer-Encoding: chunked
+1 &lt; Connection: keep-alive
+1 &lt; Access-Control-Allow-Origin: *
+1 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+1 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+1 &lt; Server: Jetty(9.2.9.v20150224)
+{&quot;id&quot;:9223372036854247595,&quot;name&quot;:&quot;Scooby&quot;,&quot;photoUrls&quot;:[],&quot;tags&quot;:[],&quot;status&quot;:&quot;available&quot;}
+
+04:00:52.719 [pool-1-thread-2] DEBUG com.intuit.karate - request:
+2 &gt; PUT https://petstore.swagger.io/v2/pet/9223372036854247595
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Content-Length: 17
+2 &gt; Host: petstore.swagger.io
+2 &gt; Connection: Keep-Alive
+2 &gt; User-Agent: Apache-HttpClient/4.5.13 (Java/1.8.0_311)
+2 &gt; Accept-Encoding: gzip,deflate
+{&quot;status&quot;:&quot;sold&quot;}
+
+---------------------------------------------------------
+feature: classpath:pets/post/pet-post.feature
+scenarios:  8 | passed:  8 | failed:  0 | time: 7,0592
+---------------------------------------------------------
+
+04:00:52.904 [pool-2-thread-1] INFO  com.intuit.karate.Suite - &lt;&lt;pass&gt;&gt; feature 2 of 4 (2 remaining) classpath:pets/post/pet-post.feature
+04:00:53.440 [pool-1-thread-2] DEBUG com.intuit.karate - response time in milliseconds: 720
+2 &lt; 405
+2 &lt; Date: Mon, 03 Jul 2023 09:00:50 GMT
+2 &lt; Content-Type: application/xml
+2 &lt; Content-Length: 102
+2 &lt; Connection: keep-alive
+2 &lt; Access-Control-Allow-Origin: *
+2 &lt; Access-Control-Allow-Methods: GET, POST, DELETE, PUT
+2 &lt; Access-Control-Allow-Headers: Content-Type, api_key, Authorization
+2 &lt; Server: Jetty(9.2.9.v20150224)
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; standalone=&quot;yes&quot;?&gt;&lt;apiResponse&gt;&lt;type&gt;unknown&lt;/type&gt;&lt;/apiResponse&gt;
+
+---------------------------------------------------------
+feature: classpath:pets/put/pet.feature
+scenarios:  1 | passed:  1 | failed:  0 | time: 1,4758
+---------------------------------------------------------
+
+04:00:53.532 [pool-2-thread-1] INFO  com.intuit.karate.Suite - &lt;&lt;pass&gt;&gt; feature 4 of 4 (0 remaining) classpath:pets/put/pet.feature
+Karate version: 1.2.0.RC5
+======================================================
+elapsed:   7,10 | threads:    4 | thread time: 15,59 
+features:     3 | skipped:    1 | efficiency: 0,55
+scenarios:   12 | passed:    11 | failed: 1
+======================================================
+&gt;&gt;&gt; failed features:
+match failed: CONTAINS_ANY
+  $ | actual does not contain expected | actual array does not contain any of the expected items (LIST:NUMBER)
+  [9223372036854246701,822922,9029,4890,9223372036854246860,68,15]
+  9223372036854247588
+
+    $[6] | not equal (NUMBER:NUMBER)
+    15
+    9223372036854247588
+
+    $[5] | not equal (NUMBER:NUMBER)
+    68
+    9223372036854247588
+
+    $[4] | not equal (NUMBER:NUMBER)
+    9223372036854246860
+    9223372036854247588
+
+    $[3] | not equal (NUMBER:NUMBER)
+    4890
+    9223372036854247588
+
+    $[2] | not equal (NUMBER:NUMBER)
+    9029
+    9223372036854247588
+
+    $[1] | not equal (NUMBER:NUMBER)
+    822922
+    9223372036854247588
+
+    $[0] | not equal (NUMBER:NUMBER)
+    9223372036854246701
+    9223372036854247588
+
+classpath:pets/get/pet-get.feature:27
+&lt;&lt;&lt;
+
+HTML report: (paste into browser to view) | Karate version: 1.2.0.RC5
+file:///C:/Users/Bayteq/Desktop/ntt_data/prueba_tecnica/build/karate-reports/karate-summary.html
+===================================================================
+
+</pre>
+</span>
+</div>
+<div id="tab2" class="tab">
+<h2>Standard error</h2>
+<span class="code">
+<pre>jul 03, 2023 4:00:53 AM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\Bayteq\Desktop\ntt_data\prueba_tecnica\build\karate-reports\pets.get.pet-get.json' contains 1 features
+jul 03, 2023 4:00:53 AM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\Bayteq\Desktop\ntt_data\prueba_tecnica\build\karate-reports\pets.post.pet-post.json' contains 1 features
+jul 03, 2023 4:00:53 AM net.masterthought.cucumber.ReportParser parseJsonFiles
+INFORMACIÓN: File 'C:\Users\Bayteq\Desktop\ntt_data\prueba_tecnica\build\karate-reports\pets.put.pet.json' contains 1 features
+</pre>
+</span>
+</div>
+</div>
+<div id="footer">
+<p>
+<div>
+<label class="hidden" id="label-for-line-wrapping-toggle" for="line-wrapping-toggle">Wrap lines
+<input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
+</label>
+</div>Generated by 
+<a href="http://www.gradle.org">Gradle 7.1.1</a> at 03/07/2023 4:00:54</p>
+</div>
+</div>
+</body>
+</html>
