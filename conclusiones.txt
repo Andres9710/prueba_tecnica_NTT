@@ -1,0 +1,24 @@
+CONCLUSIONES DE LA API https://petstore.swagger.io/
+NOTA: Todas las funcionalidades a probrar no necesitamos estar logeados, por lo cual no fue necesario declarar parametros.
+
+Funcionalidad: Añadir una mascota a la tienda
+
+Se identificó que faltan algunas validaciones importantes en esta funcionalidad.
+No se impide la creación de mascotas con el mismo ID, lo que sobrescribe la información existente.
+No se requieren parámetros obligatorios para generar una nueva mascota, lo que permite enviar un JSON vacío y obtener una respuesta exitosa con estado 200.
+La documentación menciona 3 estados al crear una mascota, pero es posible crear una mascota solo con el nombre, lo cual debería ser incorrecto.
+Algunos escenarios de prueba que deberían haber fallado no lo hicieron debido a la falta de validaciones, como la validación de caracteres y campos obligatorios.
+El campo "id" solo acepta valores numéricos y si se envía un texto, la petición falla.
+
+Funcionalidad: Consultar la mascota ingresada previamente (Búsqueda por ID)
+Se concluyó que esta funcionalidad funciona correctamente, tal como se describe en la documentación de la API.
+
+Funcionalidad: Actualizar el nombre de la mascota y el estatus a "sold"
+Se determinó que esta funcionalidad no funciona correctamente según lo especificado en la documentación de la API.
+Al intentar actualizar un dato, se obtiene una respuesta con estado 405, indicando que el método utilizado no está permitido para la ruta o recurso específico en el servidor.
+
+Funcionalidad: Consultar la mascota modificada por estatus (Búsqueda por estatus)
+No fue posible probar esta funcionalidad debido a la limitación en la función de actualización que no estaba permitida.
+Sin embargo, se supone que la consulta por estatus funciona correctamente, según la información proporcionada en la documentación.
+
+En resumen, se identificaron varias deficiencias en la API de https://petstore.swagger.io/. Algunas funcionalidades carecen de validaciones importantes, permitiendo situaciones incorrectas como mascotas con el mismo ID o campos obligatorios faltantes. La actualización de datos no está permitida correctamente, generando respuestas de error. Se recomienda mejorar y corregir estas deficiencias para garantizar la integridad y consistencia de la API.
