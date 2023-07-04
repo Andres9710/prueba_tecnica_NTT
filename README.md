@@ -22,6 +22,6 @@ Run the class ManagementTest.java
 # Execution reports in the cucumber-html-reports folder
 The reports will be available in the build/cucumber-html-reports/
 The reports are in .html format for example:
--report-feature_810646683.html
--report-feature_2_3736200523.html
--report-feature_1_2524714633.html
+- report-feature_810646683.html
+- report-feature_2_3736200523.html
+- report-feature_1_2524714633.html
